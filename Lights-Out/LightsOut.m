@@ -80,7 +80,7 @@ classdef LightsOut < matlab.apps.AppBase
 
         % Called when the first LED controlling button is pushed. This
         % function toggles LEDs 1 and 2.
-        function button1ButtonPushed(app, ~)
+        function button1Pushed(app, ~)
             if(isequal(app.light1.Color,[0 1 0]))
                 app.light1.Color = 'r';
             else
@@ -98,7 +98,7 @@ classdef LightsOut < matlab.apps.AppBase
 
         % Called when the second LED controlling button is pushed. This
         % function toggles LEDs 1, 2, and 3.
-        function button2ButtonPushed(app, ~)
+        function button2Pushed(app, ~)
             if(isequal(app.light1.Color,[0 1 0]))
                 app.light1.Color = 'r';
             else
@@ -121,7 +121,7 @@ classdef LightsOut < matlab.apps.AppBase
 
         % Called when the third LED controlling button is pushed. This
         % function toggles LEDs 2, 3, and 4.
-        function button3ButtonPushed(app, ~)
+        function button3Pushed(app, ~)
             if(isequal(app.light2.Color,[0 1 0]))
                 app.light2.Color = 'r';
             else
@@ -144,7 +144,7 @@ classdef LightsOut < matlab.apps.AppBase
 
         % Called when the fourth LED controlling button is pushed. This
         % function toggles LEDs 3, 4, and 5.
-        function button4ButtonPushed(app, ~)
+        function button4Pushed(app, ~)
             if(isequal(app.light3.Color,[0 1 0]))
                 app.light3.Color = 'r';
             else
@@ -167,7 +167,7 @@ classdef LightsOut < matlab.apps.AppBase
 
         % Called when the fifth LED controlling button is pushed. This
         % function toggles LEDs 4, 5, and 6.
-        function button5ButtonPushed(app, ~)
+        function button5Pushed(app, ~)
             if(isequal(app.light4.Color,[0 1 0]))
                 app.light4.Color = 'r';
             else
@@ -190,7 +190,7 @@ classdef LightsOut < matlab.apps.AppBase
 
         % Called when the sixth LED controlling button is pushed. This
         % function toggles LEDs 5, 6, and 7.
-        function button6ButtonPushed(app, ~)
+        function button6Pushed(app, ~)
             if(isequal(app.light5.Color,[0 1 0]))
                 app.light5.Color = 'r';
             else
@@ -213,7 +213,7 @@ classdef LightsOut < matlab.apps.AppBase
 
         % Called when the seventh LED controlling button is pushed. This
         % function toggles LEDs 6, 7, and 8.
-        function button7ButtonPushed(app, ~)
+        function button7Pushed(app, ~)
             if(isequal(app.light6.Color,[0 1 0]))
                 app.light6.Color = 'r';
             else
@@ -236,7 +236,7 @@ classdef LightsOut < matlab.apps.AppBase
 
         % Called when the eighth LED controlling button is pushed. This
         % function toggles LEDs 7, 8, and 9.
-        function button8ButtonPushed(app, ~)
+        function button8Pushed(app, ~)
             if(isequal(app.light7.Color,[0 1 0]))
                 app.light7.Color = 'r';
             else
@@ -259,7 +259,7 @@ classdef LightsOut < matlab.apps.AppBase
 
         % Called when the ninth LED controlling button is pushed. This
         % function toggles LEDs 8 and 9.
-        function button9ButtonPushed(app, ~)
+        function button9Pushed(app, ~)
             if(isequal(app.light8.Color,[0 1 0]))
                 app.light8.Color = 'r';
             else
@@ -277,7 +277,7 @@ classdef LightsOut < matlab.apps.AppBase
 
         % Called when the '1' button is pushed. This function starts the
         % game with pattern 1.
-        function pattern1ButtonPushed(app, ~)
+        function pattern1Pushed(app, ~)
             app.light1.Color = 'g';
             app.light2.Color = 'g';
             app.light3.Color = 'g';
@@ -287,7 +287,7 @@ classdef LightsOut < matlab.apps.AppBase
 
         % Called when the '2' button is pushed. This function starts the
         % game with pattern 2.
-        function pattern2ButtonPushed(app, ~)
+        function pattern2Pushed(app, ~)
             app.light1.Color = 'g';
             app.light2.Color = 'g';
             app.light5.Color = 'g';
@@ -298,7 +298,7 @@ classdef LightsOut < matlab.apps.AppBase
 
         % Called when the '3' button is pushed. This function starts the
         % game with pattern 3.
-        function pattern3ButtonPushed(app, ~)
+        function pattern3Pushed(app, ~)
             app.light1.Color = 'g';
             app.light4.Color = 'g';
             app.light5.Color = 'g';
@@ -366,7 +366,7 @@ classdef LightsOut < matlab.apps.AppBase
 
             % Create button1
             app.button1 = uibutton(app.UIFigure, 'push');
-            app.button1.ButtonPushedFcn = createCallbackFcn(app, @button1ButtonPushed, true);
+            app.button1.ButtonPushedFcn = createCallbackFcn(app, @button1Pushed, true);
             app.button1.BackgroundColor = [0.9608 0.9608 0.9608];
             app.button1.Enable = 'off';
             app.button1.Position = [12 84 20 20];
@@ -374,63 +374,63 @@ classdef LightsOut < matlab.apps.AppBase
 
             % Create button2
             app.button2 = uibutton(app.UIFigure, 'push');
-            app.button2.ButtonPushedFcn = createCallbackFcn(app, @button2ButtonPushed, true);
+            app.button2.ButtonPushedFcn = createCallbackFcn(app, @button2Pushed, true);
             app.button2.Enable = 'off';
             app.button2.Position = [44 84 20 20];
             app.button2.Text = '';
 
             % Create button3
             app.button3 = uibutton(app.UIFigure, 'push');
-            app.button3.ButtonPushedFcn = createCallbackFcn(app, @button3ButtonPushed, true);
+            app.button3.ButtonPushedFcn = createCallbackFcn(app, @button3Pushed, true);
             app.button3.Enable = 'off';
             app.button3.Position = [76 84 20 20];
             app.button3.Text = '';
 
             % Create button4
             app.button4 = uibutton(app.UIFigure, 'push');
-            app.button4.ButtonPushedFcn = createCallbackFcn(app, @button4ButtonPushed, true);
+            app.button4.ButtonPushedFcn = createCallbackFcn(app, @button4Pushed, true);
             app.button4.Enable = 'off';
             app.button4.Position = [108 84 20 20];
             app.button4.Text = '';
 
             % Create button5
             app.button5 = uibutton(app.UIFigure, 'push');
-            app.button5.ButtonPushedFcn = createCallbackFcn(app, @button5ButtonPushed, true);
+            app.button5.ButtonPushedFcn = createCallbackFcn(app, @button5Pushed, true);
             app.button5.Enable = 'off';
             app.button5.Position = [140 84 20 20];
             app.button5.Text = '';
 
             % Create button6
             app.button6 = uibutton(app.UIFigure, 'push');
-            app.button6.ButtonPushedFcn = createCallbackFcn(app, @button6ButtonPushed, true);
+            app.button6.ButtonPushedFcn = createCallbackFcn(app, @button6Pushed, true);
             app.button6.Enable = 'off';
             app.button6.Position = [172 84 20 20];
             app.button6.Text = '';
 
             % Create button7
             app.button7 = uibutton(app.UIFigure, 'push');
-            app.button7.ButtonPushedFcn = createCallbackFcn(app, @button7ButtonPushed, true);
+            app.button7.ButtonPushedFcn = createCallbackFcn(app, @button7Pushed, true);
             app.button7.Enable = 'off';
             app.button7.Position = [204 84 20 20];
             app.button7.Text = '';
 
             % Create button8
             app.button8 = uibutton(app.UIFigure, 'push');
-            app.button8.ButtonPushedFcn = createCallbackFcn(app, @button8ButtonPushed, true);
+            app.button8.ButtonPushedFcn = createCallbackFcn(app, @button8Pushed, true);
             app.button8.Enable = 'off';
             app.button8.Position = [236 84 20 20];
             app.button8.Text = '';
 
             % Create button9
             app.button9 = uibutton(app.UIFigure, 'push');
-            app.button9.ButtonPushedFcn = createCallbackFcn(app, @button9ButtonPushed, true);
+            app.button9.ButtonPushedFcn = createCallbackFcn(app, @button9Pushed, true);
             app.button9.Enable = 'off';
             app.button9.Position = [268 84 20 20];
             app.button9.Text = '';
 
             % Create pattern1
             app.pattern1 = uibutton(app.UIFigure, 'push');
-            app.pattern1.ButtonPushedFcn = createCallbackFcn(app, @pattern1ButtonPushed, true);
+            app.pattern1.ButtonPushedFcn = createCallbackFcn(app, @pattern1Pushed, true);
             app.pattern1.FontSize = 16;
             app.pattern1.FontWeight = 'bold';
             app.pattern1.Position = [32 18 44 41];
@@ -438,7 +438,7 @@ classdef LightsOut < matlab.apps.AppBase
 
             % Create pattern2
             app.pattern2 = uibutton(app.UIFigure, 'push');
-            app.pattern2.ButtonPushedFcn = createCallbackFcn(app, @pattern2ButtonPushed, true);
+            app.pattern2.ButtonPushedFcn = createCallbackFcn(app, @pattern2Pushed, true);
             app.pattern2.FontSize = 16;
             app.pattern2.FontWeight = 'bold';
             app.pattern2.Position = [128 18 44 41];
@@ -446,7 +446,7 @@ classdef LightsOut < matlab.apps.AppBase
 
             % Create pattern3
             app.pattern3 = uibutton(app.UIFigure, 'push');
-            app.pattern3.ButtonPushedFcn = createCallbackFcn(app, @pattern3ButtonPushed, true);
+            app.pattern3.ButtonPushedFcn = createCallbackFcn(app, @pattern3Pushed, true);
             app.pattern3.FontSize = 16;
             app.pattern3.FontWeight = 'bold';
             app.pattern3.Position = [224 18 44 41];
