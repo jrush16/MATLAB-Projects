@@ -28,7 +28,6 @@ classdef AlarmClock < matlab.apps.AppBase
         % Called when the alarm time is reached. This function enables the
         % snooze button and plays the alarm sound.
         function notify(app)
-            pause('on');
             app.snooze.Enable = 'on';
             [y,Fs] = audioread(app.alarmSound.Value);
             sound(y,Fs);
